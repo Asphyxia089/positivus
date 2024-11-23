@@ -784,6 +784,15 @@
 	@media (max-width: 457px) {
 		min-height: 180px;
 	}
+	@media (max-width: 365px) {
+		min-height: 188px;
+	}
+	@media (max-width: 335px) {
+		min-height: 213px;
+	}
+	@media (max-width: 321px) {
+		min-height: 233px;
+	}
 }
 .qablock__accordion-item.active {
 	background-color: $green-color;
@@ -1078,7 +1087,7 @@
 		border-radius: 45px;
 		position: relative;
 		padding: 60px 100px 80px 100px;
-		background-image: url('../img/contactimg.png');
+		background-image: url('img/contactimg.png');
 		background-position: 100% 62.5px;
 		background-repeat: no-repeat;
 		@media (max-width: 574px) {

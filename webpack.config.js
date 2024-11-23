@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
 	entry: './src/index.js',
-	mode: 'development',
+	mode: 'production',
 	output: {
 		filename: 'main.js',
 		path: path.resolve(__dirname, 'dist'),
@@ -21,19 +21,15 @@ module.exports = {
 				loader: 'html-loader',
 			},
 			{
-				test: /\.(png|svg|jpg|jpeg|gif)$/i,
+				test: /\.(jpe?g|png|gif|svg)$/,
 				type: 'asset/resource',
+				generator: {
+					filename: 'img/[name][ext]',
+				},
 			},
 			{
 				test: /\.s[ac]ss$/i,
-				use: [
-					// Creates `style` nodes from JS strings
-					'style-loader',
-					// Translates CSS into CommonJS
-					'css-loader',
-					// Compiles Sass to CSS
-					'sass-loader',
-				],
+				use: ['style-loader', 'css-loader', 'sass-loader'],
 			},
 		],
 	},
